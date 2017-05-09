@@ -10,6 +10,12 @@ const defaultOptions = {
 }
 
 export default class HistogramCanvas {
+  /**
+   * Create new HistogramCanvas
+   *
+   * @param canvas The canvas to draw the histogram on
+   * @param options {object} Options to initialize
+   */
   constructor (canvas, options) {
     this._canvas = canvas
     this._ctx = canvas.getContext('2d')
@@ -21,6 +27,13 @@ export default class HistogramCanvas {
     }
   }
 
+  /**
+   * Redraw the histogram
+   *
+   * @param data {object} Histogram data with red, green, and blue properties,
+   *             each arrays of 256 integers
+   * @param dontClear {boolean} If true, the canvas won't be cleared
+   */
   update (data, dontClear) {
     if (data) {
       this._data = data
