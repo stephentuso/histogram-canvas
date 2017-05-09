@@ -1,16 +1,24 @@
+const defaultOptions = {
+  x: null,
+  y: null,
+  width: null,
+  height: null,
+  red: true,
+  green: true,
+  blue: true,
+  compositeOperation: 'screen'
+}
+
 export default class HistogramCanvas {
-  constructor (canvas) {
+  constructor (canvas, options) {
     this._canvas = canvas
     this._ctx = canvas.getContext('2d')
-    this.x = null
-    this.y = null
-    this.width = null
-    this.height = null
-    this.red = true
-    this.green = true
-    this.blue = true
     this._data = null
-    this.compositeOperation = 'screen'
+
+    for (let key in defaultOptions) {
+      if (!defaultOptions.hasOwnProperty(key)) continue
+      this[key] = (options && options[key]) || defaultOptions[key]
+    }
   }
 
   update (data, dontClear) {
@@ -33,9 +41,16 @@ export default class HistogramCanvas {
       this._ctx.clearRect(0, 0, this._canvas.width, this._canvas.height)
     }
     let max = Math.max.apply(null, data.red.concat(data.green, data.blue))
-    this._drawColorGraph(max, data.red, '#FF0000')
-    this._drawColorGraph(max, data.green, '#00FF00')
-    this._drawColorGraph(max, data.blue, '#0000FF')
+
+    if (this.red) {
+      this._drawColorGraph(max, data.red, '#FF0000')
+    }
+    if (this.green) {
+      this._drawColorGraph(max, data.green, '#00FF00')
+    }
+    if (this.blue) {
+      this._drawColorGraph(max, data.blue, '#0000FF')
+    }
   }
 
   _drawColorGraph (max, vals, color) {
