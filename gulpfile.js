@@ -28,7 +28,6 @@ gulp.task('browserify', function () {
     entries: 'lib/main.js',
     standalone: 'HistogramCanvas'
   })
-    .exclude('xmlhttprequest')
     .ignore('_process')
     .bundle()
 

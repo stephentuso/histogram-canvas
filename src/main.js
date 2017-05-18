@@ -9,7 +9,7 @@ const defaultOptions = {
   compositeOperation: 'screen'
 }
 
-export default class HistogramCanvas {
+class HistogramCanvas {
   /**
    * Create new HistogramCanvas
    *
@@ -34,7 +34,7 @@ export default class HistogramCanvas {
    *             each arrays of 256 integers
    * @param dontClear {boolean} If true, the canvas won't be cleared
    */
-  update (data, dontClear) {
+  update (data, dontClear = false) {
     if (data) {
       this._data = data
     }
@@ -87,3 +87,5 @@ export default class HistogramCanvas {
     ctx.fill()
   }
 }
+
+module.exports = HistogramCanvas
