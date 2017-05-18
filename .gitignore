@@ -1,4 +1,6 @@
 .idea/
+lib/
+dist/
 
 # Created by https://www.gitignore.io/api/node,phpstorm
 
