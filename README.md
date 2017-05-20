@@ -1,6 +1,6 @@
 # histogram-canvas
 
-[![npm](https://img.shields.io/npm/v/histogram-canvas.svg?style=flat-square)](https://www.npmjs.com/package/histogram-canvas)
+[![npm](https://img.shields.io/npm/v/histogram-canvas.svg?style=flat-square)](https://www.npmjs.com/package/histogram-canvas) [![Build Status](https://travis-ci.org/stephentuso/histogram-canvas.svg?branch=master)](https://travis-ci.org/stephentuso/histogram-canvas)
 
 ![Preview Image](https://raw.githubusercontent.com/stephentuso/histogram-canvas/master/preview.png)
 
