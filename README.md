@@ -24,6 +24,12 @@ Import it:
 const HistogramCanvas = require('histogram-canvas')
 ```
 
+or include the standalone file, which is attached on each [release](https://github.com/stephentuso/histogram-canvas/releases) or found in the `dist` folder when downloaded from the npm registry:
+
+```html
+<script src="path/to/histogram-canvas.min.js"></script>
+```
+
 The constructor takes a `Canvas` and an options object:
 
 ```javascript

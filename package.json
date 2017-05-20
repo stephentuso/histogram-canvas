@@ -3,6 +3,10 @@
   "version": "0.1.1",
   "description": "Draw a photo histogram on a canvas",
   "main": "lib/main.js",
+  "files": [
+    "lib",
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "build": "gulp",
