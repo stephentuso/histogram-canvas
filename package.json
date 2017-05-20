@@ -1,6 +1,6 @@
 {
   "name": "histogram-canvas",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Draw a photo histogram on a canvas",
   "main": "lib/main.js",
   "scripts": {
