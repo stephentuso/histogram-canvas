@@ -30,7 +30,7 @@ or include the standalone file, which is attached on each [release](https://gith
 <script src="path/to/histogram-canvas.min.js"></script>
 ```
 
-The constructor takes a `Canvas` and an options object:
+The constructor takes a `Canvas` and an optional options object:
 
 ```javascript
 let histogram = new HistogramCanvas(canvas, options)
