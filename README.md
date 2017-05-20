@@ -40,9 +40,9 @@ let histogram = new HistogramCanvas(canvas, options)
 
 `update(data, dontClear)`
 
-`data`: object with properties `red`, `green`, and `blue`, each arrays of numbers, representing the heights of the histogram bars. Can be any length.
+- `data`: object with properties `red`, `green`, and `blue`, each arrays of numbers, representing the heights of the histogram bars. Can be any length.
 
-`dontClear`: If true, the canvas will be cleared. Default: false
+- `dontClear`: If true, the canvas will be cleared. Default: false
 
 ## Options
 
