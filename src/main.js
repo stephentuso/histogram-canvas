@@ -79,11 +79,12 @@ class HistogramCanvas {
     ctx.fillStyle = color
     ctx.beginPath()
     ctx.moveTo(graphX, graphHeight)
-    vals.forEach((val, i) => {
+    for (let i = 0; i < vals.length; i++) {
+      let val = vals[i]
       let drawHeight = Math.round((val / max) * graphHeight)
       let drawX = graphX + (graphWidth / vals.length) * i
       ctx.lineTo(drawX, graphY - drawHeight)
-    })
+    }
     ctx.lineTo(graphX + graphWidth, graphY)
     ctx.closePath()
     ctx.fill()

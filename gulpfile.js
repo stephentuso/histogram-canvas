@@ -4,6 +4,7 @@ const source = require('vinyl-source-stream')
 const browserify = require('browserify')
 const runSequence = require('run-sequence')
 const del = require('del')
+const pump = require('pump')
 
 const MODULE_NAME = 'histogram-canvas'
 const STANDALONE_NAME = 'HistogramCanvas'
@@ -19,8 +20,12 @@ gulp.task('clean', function () {
 gulp.task('compile', function () {
   return gulp.src('./src/*.js')
     .pipe($.babel({
-      presets: ['es2015'],
-      plugins: ['transform-runtime']
+      plugins: [
+        'transform-es2015-arrow-functions',
+        'transform-es2015-block-scoping',
+        'transform-es2015-classes',
+        'transform-es2015-parameters'
+      ]
     }))
     .pipe(gulp.dest('lib'))
 })
@@ -39,9 +44,11 @@ gulp.task('browserify', function () {
     .pipe(gulp.dest('./dist'))
 })
 
-gulp.task('minify', function () {
-  return gulp.src(`./dist/${MODULE_NAME}.js`)
-    .pipe($.uglify())
-    .pipe($.rename({extname: '.min.js'}))
-    .pipe(gulp.dest('./dist'))
+gulp.task('minify', function (cb) {
+  pump([
+    gulp.src(`./dist/${MODULE_NAME}.js`),
+    $.uglify(),
+    $.rename({extname: '.min.js'}),
+    gulp.dest('./dist')
+  ], cb)
 })
