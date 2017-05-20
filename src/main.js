@@ -82,7 +82,7 @@ class HistogramCanvas {
     for (let i = 0; i < vals.length; i++) {
       let val = vals[i]
       let drawHeight = Math.round((val / max) * graphHeight)
-      let drawX = graphX + (graphWidth / vals.length) * i
+      let drawX = graphX + (graphWidth / (vals.length - 1)) * i
       ctx.lineTo(drawX, graphY - drawHeight)
     }
     ctx.lineTo(graphX + graphWidth, graphY)

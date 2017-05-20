@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
+    "test": "ava test.js",
     "build": "gulp",
     "prepublish": "npm run build"
   },
@@ -27,11 +27,13 @@
   },
   "homepage": "https://github.com/stephentuso/histogram-canvas#readme",
   "devDependencies": {
+    "ava": "^0.19.1",
     "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
     "babel-plugin-transform-es2015-block-scoping": "^6.24.1",
     "babel-plugin-transform-es2015-classes": "^6.24.1",
     "babel-plugin-transform-es2015-parameters": "^6.24.1",
     "browserify": "^14.3.0",
+    "canvas": "^1.6.5",
     "del": "^2.2.2",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.2.1",
