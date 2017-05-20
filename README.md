@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/histogram-canvas.svg?style=flat-square)](https://www.npmjs.com/package/histogram-canvas)
 
-![Preview Image](https://raw.githubusercontent.com/stephentuso/welcome-android/master/preview.png)
+![Preview Image](https://raw.githubusercontent.com/stephentuso/histogram-canvas/master/preview.png)
 
 # Install
 
