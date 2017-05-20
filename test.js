@@ -1,3 +1,5 @@
+'use strict'
+
 import test from 'ava'
 import Canvas from 'canvas'
 import HistogramCanvas from './lib/main'
@@ -31,7 +33,7 @@ test.afterEach.always(t => {
   outputCanvasImage(t.context.canvas.pngStream(), `test${index}.png`)
 })
 
-test('red only values', t => {
+test('only red values', t => {
   let canvas = t.context.canvas
   let histogram = t.context.histogram
   let red = fillColors(blank, ['red'])
@@ -40,7 +42,7 @@ test('red only values', t => {
   testChannels(t, data, 'ra', 'gb')
 })
 
-test('green only values', t => {
+test('only green values', t => {
   let canvas = t.context.canvas
   let histogram = t.context.histogram
   let green = fillColors(blank, ['green'])
@@ -49,7 +51,7 @@ test('green only values', t => {
   testChannels(t, data, 'ga', 'rb')
 })
 
-test('blue only values', t => {
+test('only blue values', t => {
   let canvas = t.context.canvas
   let histogram = t.context.histogram
   let blue = fillColors(blank, ['blue'])
