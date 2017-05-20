@@ -40,36 +40,49 @@ let histogram = new HistogramCanvas(canvas, options)
 
 `update(data, dontClear)`
 
-- `data`: object with properties `red`, `green`, and `blue`, each arrays of numbers, representing the heights of the histogram bars. Can be any length.
+ - `data` Object<br>
+    Object with properties `red`, `green`, and `blue`, each arrays of numbers, representing the heights of the histogram bars. Arrays can be any length.
 
-- `dontClear`: If true, the canvas will be cleared. Default: false
+ - `dontClear` Boolean (false)<br>
+    If true, the canvas will be cleared.
 
 ## Options
 
 Can be passed in constructor options object and are available as properties on the instance.
 
-Default value in parentheses:
+Default values are in parentheses.
 
-`red: Boolean (true)` Whether or not to draw red graph.
+ - `red` Boolean (true)<br>
+    Whether or not to draw red graph.
 
-`green: Boolean (true)` Whether or not to draw green graph.
+ - `green` Boolean (true)<br>
+    Whether or not to draw green graph.
 
-`blue: Boolean (true)` Whether or not to draw blue graph.
+ - `blue` Boolean (true)<br>
+    Whether or not to draw blue graph.
 
-`redColor: String ('#FF0000')` Color for drawing red data
+ - `redColor` String ('#FF0000')<br>
+    Color for drawing red data
 
-`greenColor: String ('#00FF00)` Color for drawing green data
+ - `greenColor` String ('#00FF00)<br>
+    Color for drawing green data
 
-`blueColor: String ('#0000FF')` Color for drawing blue data
+ - `blueColor` String ('#0000FF')<br>
+    Color for drawing blue data
 
-`compositeOperation: String ('screen')` See [options here](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)
+ - `compositeOperation` String ('screen')<br>
+    See [options here](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation)
 
 The following are for drawing the histogram at a specific location in the canvas. By default the histogram will fill the canvas.
 
-`x: Number (0)`: X coordinate of left side of histogram
+ - `x` Number (0)<br>
+    X coordinate of left side of histogram
 
-`y: Number (canvas.height)`: Y coordinate of bottom of histogram
+ - `y` Number (canvas.height)<br>
+    Y coordinate of bottom of histogram
 
-`width: Number (canvas.width)`: Width of histogram
+ - `width` Number (canvas.width)<br>
+    Width of histogram
 
-`height: Number (canvas.height)`: Height of histogram
+ - `height` Number (canvas.height)<Br>
+    Height of histogram
