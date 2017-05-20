@@ -6,6 +6,9 @@ const defaultOptions = {
   red: true,
   green: true,
   blue: true,
+  redColor: '#FF0000',
+  greenColor: '#00FF00',
+  blueColor: '#0000FF',
   compositeOperation: 'screen'
 }
 
@@ -56,13 +59,13 @@ class HistogramCanvas {
     let max = Math.max.apply(null, data.red.concat(data.green, data.blue))
 
     if (this.red) {
-      this._drawColorGraph(max, data.red, '#FF0000')
+      this._drawColorGraph(max, data.red, this.redColor)
     }
     if (this.green) {
-      this._drawColorGraph(max, data.green, '#00FF00')
+      this._drawColorGraph(max, data.green, this.greenColor)
     }
     if (this.blue) {
-      this._drawColorGraph(max, data.blue, '#0000FF')
+      this._drawColorGraph(max, data.blue, this.blueColor)
     }
   }
 
@@ -78,9 +81,8 @@ class HistogramCanvas {
     ctx.moveTo(graphX, graphHeight)
     vals.forEach((val, i) => {
       let drawHeight = Math.round((val / max) * graphHeight)
-      let drawX = graphX + (graphWidth / 256) * i
+      let drawX = graphX + (graphWidth / vals.length) * i
       ctx.lineTo(drawX, graphY - drawHeight)
-      // ctx.fillRect(drawX, graphY, 0.5, percent * graphHeight)
     })
     ctx.lineTo(graphX + graphWidth, graphY)
     ctx.closePath()
