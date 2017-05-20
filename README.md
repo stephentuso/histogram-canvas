@@ -4,7 +4,7 @@
 
 ![Preview Image](https://raw.githubusercontent.com/stephentuso/histogram-canvas/master/preview.png)
 
-# Install
+## Install
 
 ```
 yarn add histogram-canvas
@@ -16,7 +16,7 @@ or
 npm i --save histogram-canvas
 ```
 
-# Usage
+## Usage
 
 Import it:
 
@@ -36,7 +36,7 @@ The constructor takes a `Canvas` and an options object:
 let histogram = new HistogramCanvas(canvas, options)
 ```
 
-# Methods
+## Methods
 
 `update(data, dontClear)`
 
@@ -86,3 +86,7 @@ The following are for drawing the histogram at a specific location in the canvas
 
  - `height` Number (canvas.height)<Br>
     Height of histogram
+
+## License
+
+MIT © Stephen Tuso
