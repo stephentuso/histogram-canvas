@@ -1,5 +1,7 @@
 # histogram-canvas
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/stephentuso/histogram-canvas.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/histogram-canvas.svg)](https://www.npmjs.com/package/histogram-canvas) [![Build Status](https://travis-ci.org/stephentuso/histogram-canvas.svg?branch=master&style=flat-square)](https://travis-ci.org/stephentuso/histogram-canvas)
 
 ![Preview Image](https://raw.githubusercontent.com/stephentuso/histogram-canvas/master/preview.png)
